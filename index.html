@@ -11,6 +11,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			#possibilities {
+				font-size: 24px; /* Adjust font size as needed */
+			}
+		</style>
 	</head>
 	<body class="landing is-preload">
 
@@ -50,43 +56,65 @@
 					</section>
 
 				<!-- One -->
-					<section id="one" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Energy Field TCG<br />
-								Always Another Board, Always Another Experience</h2>
-								<p>The Card-Board Game for Up to 4 Players</p>
-								<p>Non-Combat Base</p>
-								<p>Five type of cards for creative play</p>
-									<p>The number of possibilities for all four players in a game are: 2.20×10<sup>170</sup>
-							</header>
-							<ul class="icons major">
-								<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
-								<li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
-								<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
-							</ul>
-						</div>
-					</section>
+				<section id="one" class="wrapper style3 special">
+					<div class="inner">
+						<header class="major">
+							<h2>Energy Field TCG</h2>
+							<div></div>
+							<h2>Always Another Board, Always Another Experience</h2>
+							<p>The Card-Board Game for Up to 4 Players</p>
+							<p>Non-Combat Base</p>
+							<p>Five type of cards for creative play</p>
+							<p>The number of possibilities for all four players in a game are</p> <span id="possibilities"><p>0</span></p>
+						</header>
+						<ul class="icons major">
+							<li><span class="icon fa-gem major style1"><span class="label">Lorem</span></span></li>
+							<li><span class="icon fa-heart major style2"><span class="label">Ipsum</span></span></li>
+							<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
+							<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
+							<li><span class="icon solid fa-code major style3"><span class="label">Dolor</span></span></li>
+						</ul>
+					</div>
+				</section>
+				<script>
+					// Get the span element
+					var possibilitiesSpan = document.getElementById("possibilities");
+					// Final value to reach
+					var finalValue = 220000000000000000000000000000000000000;
+					// Incremental step (adjusted for a faster increment)
+					var step = finalValue / 456784365925435432543254696548959;
+			
+					// Function to update the number
+					function updateNumber() {
+						var currentValue = parseInt(possibilitiesSpan.textContent.replace(/,/g, ""));
+						if (currentValue + step >= finalValue) {
+							possibilitiesSpan.textContent = finalValue.toLocaleString(); // Add commas for readability
+							clearInterval(timer); // Stop the interval once the final value is reached
+						} else {
+							possibilitiesSpan.textContent = (currentValue + step).toLocaleString(); // Add commas for readability
+						}
+					}
+			
+					// Start updating the number every 10 milliseconds (adjust as needed)
+					var timer = setInterval(updateNumber, 10);
+				</script>
 
 				<!-- Two -->
-						<section class="spotlight">
-							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
+				<section class="spotlight">
+					<div class="image"><img src="images/Screenshot 2023-08-02 at 00.03.05.png" alt="" /></div><div class="content">
 								<h2>Play Casually or Competitive</h2>
 								<p>The players use their cards to engage in a dynamic free-for-all, 1v1, 2v2 match. Strategy and adaptability are key as players navigate the shifting gameplay and politics.
 								</p>
 							</div>
 						</section>
-						<section id="two" class="wrapper alt style3">
-							<section class="spotlight">
-								<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
+						<section class="spotlight">
+							<div class="image"><img src="images/inventor.png" alt="" /></div><div class="content">
 									<h2>Find Your Strategy</h2>
 								<p>Select a Deck, or Custom Your Own, select an Inventor Card and you are done!</p>
 								</div>
 							</section>
 						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
+							<div class="image"><img src="images/energia doble.png" alt="" /></div><div class="content">
 								<h2>Start The Game</h2>
 								<p>Position your Inventor in the game, draw from your deck, and navigate through a game of meaningful choices.</p>
 									<p>Victory belongs to the player who amasses the most points! </p>
@@ -95,7 +123,7 @@
 					</section>
 
 				<!-- Three -->
-					<section id="three" class="wrapper style5 special">
+					<section id="three" class="wrapper styl1 special">
 						<div class="inner">
 							<header class="major">
 								<h2>Card Types</h2>
