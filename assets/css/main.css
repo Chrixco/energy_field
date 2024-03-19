@@ -31,7 +31,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
 	line-height: 1;
-	background-color: #c71589;
+	background-color: #000000;
 }
 
 ol, ul {
@@ -88,7 +88,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #2e3842;
+		background: #191c2e;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
